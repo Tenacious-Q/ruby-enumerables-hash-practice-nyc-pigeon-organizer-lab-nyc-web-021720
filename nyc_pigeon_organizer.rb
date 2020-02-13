@@ -24,7 +24,7 @@ end
 def nyc_pigeon_organizer(data)
   pigeons = {}
   data.each do |attribute_name, attributes|
-    attributes.each do |stats, all_names|
+    attributes.each do |attribute_value, all_names|
       all_names.each do |name|
         if pigeons[name] == nil
           pigeons[name] = {}
@@ -32,7 +32,7 @@ def nyc_pigeon_organizer(data)
         if pigeons[name][attribute_name] == nil
           pigeons[name][attribute_name] = []
         end
-        pigeons[name][attribute_name] << stats.to_s
+        pigeons[name][attribute_name] << attribute_value.to_s
       end
     end
   end
