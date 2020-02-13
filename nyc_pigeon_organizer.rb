@@ -2,21 +2,21 @@ def nyc_pigeon_organizer(data)
   pigeon_data_by_name = {}
   data.each do |attribute_name, attributes|
     attributes.each do |attribute_value, pigeon_names|
-      pigeon_names.each do |name| 
-        if pigeon_data_by_name[name] == nil 
+      pigeon_names.each do |name|
+        if pigeon_data_by_name[name] == nil
           pigeon_data_by_name[name] == {}
-        end 
-        if pigeon_data_by_name[attribute_name] == nil 
+        end
+        if pigeon_data_by_name[attribute_name] == nil
           pigeon_data_by_name[attribute_name] = []
-        end 
-        pigeon_data_by_name[name][attributes] << attribute_value.to_s 
+        end
+        pigeon_data_by_name[name][attributes] << attribute_value.to_s
       end
-    end 
+    end
   end
-  pigeon_data_by_name 
+  pigeon_data_by_name
 end
 
-=begin 
+=begin
 #example
 def nyc_pigeon_organizer(data)
   pigeon_list = {}
