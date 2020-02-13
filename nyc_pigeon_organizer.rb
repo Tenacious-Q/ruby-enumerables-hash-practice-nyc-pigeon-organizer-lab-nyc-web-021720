@@ -1,3 +1,4 @@
+=begin
 def nyc_pigeon_organizer(data)
   pigeon_data_by_name = {}
   data.each do |attribute_name, attributes|
@@ -15,8 +16,10 @@ def nyc_pigeon_organizer(data)
   end
   pigeon_data_by_name
 end
+=end 
 
-=begin
+
+#=begin
 #example
 def nyc_pigeon_organizer(data)
   pigeon_list = {}
@@ -36,4 +39,4 @@ def nyc_pigeon_organizer(data)
   pigeon_list
 end
 
-=end
+#=end
