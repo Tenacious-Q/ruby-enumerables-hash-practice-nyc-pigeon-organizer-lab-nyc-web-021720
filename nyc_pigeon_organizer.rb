@@ -3,8 +3,8 @@ def nyc_pigeon_organizer(data)
   pigeons = {}
   data.each do |attribute_name, attributes|
     attributes.each do |attribute_value, all_names|
-      all_names.each do |name|  # Don't use symbols: i.e. [:name] 
-        if pigeons[name] == nil   
+      all_names.each do |name|  # Don't use symbols: i.e. [:name]
+        if pigeons[name] == nil
           pigeons[name] = {}
         end
         if pigeons[name][attribute_name] == nil
@@ -43,4 +43,4 @@ def nyc_pigeon_organizer(data)
   pigeon_data_by_name
 end
 
-=end 
+=end
