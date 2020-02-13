@@ -23,16 +23,16 @@ end
 #example
 def nyc_pigeon_organizer(data)
   pigeons = {}
-  data.each do |attributes, value|
+  data.each do |attribute_name, attributes|
     value.each do |stats, all_names|
       all_names.each do |name|
         if pigeons[name] == nil
           pigeons[name] = {}
         end
-        if pigeons[name][attributes] == nil
-          pigeons[name][attributes] = []
+        if pigeons[name][attribute_name] == nil
+          pigeons[name][attribute_name] = []
         end
-        pigeons[name][attributes] << stats.to_s
+        pigeons[name][attribute_name] << stats.to_s
       end
     end
   end
