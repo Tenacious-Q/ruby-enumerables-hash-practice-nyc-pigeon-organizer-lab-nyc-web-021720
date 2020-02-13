@@ -10,7 +10,7 @@ def nyc_pigeon_organizer(data)
         if pigeon_data_by_name[name][attribute_name] == nil
           pigeon_data_by_name[name][attribute_name] = []
         end
-        pigeon_data_by_name[name][attribute_name].push(attribute_value.to_s)
+        pigeon_data_by_name[name][attribute_name] < attribute_value.to_s
       end
     end
   end
@@ -23,16 +23,16 @@ end
 #example
 def nyc_pigeon_organizer(data)
   pigeon_list = {}
-  data.each do |color_gender_lives, value|
+  data.each do |attributes, value|
     value.each do |stats, all_names|
       all_names.each do |name|
         if pigeon_list[name] == nil
           pigeon_list[name] = {}
         end
-        if pigeon_list[name][color_gender_lives] == nil
-          pigeon_list[name][color_gender_lives] = []
+        if pigeon_list[name][attributes] == nil
+          pigeon_list[name][attributes] = []
         end
-        pigeon_list[name][color_gender_lives] << stats.to_s
+        pigeon_list[name][attributes] << stats.to_s
       end
     end
   end
