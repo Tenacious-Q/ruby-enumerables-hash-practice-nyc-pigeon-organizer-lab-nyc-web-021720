@@ -1,11 +1,11 @@
 #def nyc_pigeon_organizer(data)
 #  pidgeon_data_by_name = {}
-#  data.each do |attribute_name, attributes| 
-#    attributes.each do |attribute_value, pigeon_names| 
-#      pigeon_names.each do |name|  
+#  data.each do |attribute_name, attributes|
+#    attributes.each do |attribute_value, pigeon_names|
+#      pigeon_names.each do |name|
 #end
 
-#example 
+#example
 def nyc_pigeon_organizer(data)
   pigeon_list = {}
   data.each do |color_gender_lives, value|
@@ -19,7 +19,7 @@ def nyc_pigeon_organizer(data)
         end
         pigeon_list[name][color_gender_lives].push(stats.to_s)
       end
-    end 
+    end
   end
   pigeon_list
 end
